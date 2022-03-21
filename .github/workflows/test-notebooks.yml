@@ -1,0 +1,24 @@
+name: Test Jupyter Notebook 📓
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-n-deploy:
+    name: Test 🔧
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout code 🛎️
+      uses: actions/checkout@v2.3.1
+      with:
+        persist-credentials: false
+    - name: Set up Python 3.7 🐍
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+    - name: Install dependencies 💾
+      run: |
+        pip install -r requirements-ci.txt
+        pip install -r .binder/requirements.txt
+    - name: Test arXiv:1909.05167
+      run: pytest --nbval arXiv:1909.05167/ --sanitize-with nbval_sanitize_file

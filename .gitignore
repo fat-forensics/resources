@@ -1,0 +1,9 @@
+# MacOS
+*.DS_Store
+
+# Jupyter Notebooks
+*.ipynb_checkpoints
+*.data
+
+# Misc
+*.pdf
