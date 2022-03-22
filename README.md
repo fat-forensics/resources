@@ -16,4 +16,4 @@ The list of resources is enclosed below.
 * Relevant Jupyter Notebooks are published in the [arXiv:1909.05167 directory][directory:1909.05167].
 
 [arXiv:1909.05167]: https://arxiv.org/abs/1909.05167
-[directory:1909.05167]: https://github.com/fat-forensics/resources/tree/master/arXiv:1909.05167
+[directory:1909.05167]: https://github.com/fat-forensics/resources/tree/master/arXiv.1909.05167

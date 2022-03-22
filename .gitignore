@@ -2,8 +2,9 @@
 *.DS_Store
 
 # Jupyter Notebooks
+*.pytest_cache
 *.ipynb_checkpoints
-*.data
+*.data*
 
 # Misc
 *.pdf

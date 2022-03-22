@@ -20,5 +20,5 @@ jobs:
       run: |
         pip install -r requirements-ci.txt
         pip install -r .binder/requirements.txt
-    - name: Test arXiv:1909.05167
-      run: pytest --nbval arXiv:1909.05167/ --sanitize-with nbval_sanitize_file
+    - name: Test arXiv.1909.05167
+      run: pytest --nbval arXiv.1909.05167/ --sanitize-with nbval_sanitize_file
