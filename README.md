@@ -12,8 +12,21 @@ The list of resources is enclosed below.
 
 ## FAT Forensics: A Python Toolbox for Algorithmic Fairness, Accountability and Transparency ##
 
+See the [`arXiv.1909.05167`](./arXiv.1909.05167/) directory for more details.
+
 * The manuscripts is available on [arXiv][arXiv:1909.05167].
 * Relevant Jupyter Notebooks are published in the [arXiv:1909.05167 directory][directory:1909.05167].
 
 [arXiv:1909.05167]: https://arxiv.org/abs/1909.05167
 [directory:1909.05167]: https://github.com/fat-forensics/resources/tree/master/arXiv.1909.05167
+
+## Building Tabular Surrogates With an Interactive Widget ##
+
+See the [`tabular_surrogate_builder`](./tabular_surrogate_builder/) directory for more details.
+The Jupyter Notebook was used for:
+
+* [2021 BIAS Summer School][2021_bias-summer-school]; and
+* [2021 TAILOR Summer School][2021_tailor-summer-school].
+
+[2021_tailor-summer-school]: https://events.fat-forensics.org/2021_tailor-summer-school/
+[2021_bias-summer-school]: https://events.fat-forensics.org/2021_bias/

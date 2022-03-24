@@ -1,1 +1,2 @@
 -r ../arXiv.1909.05167/requirements.txt
+-r ../tabular_surrogate_builder/requirements.txt

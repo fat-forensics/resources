@@ -22,3 +22,4 @@ jobs:
         pip install -r .binder/requirements.txt
     - name: Test arXiv.1909.05167
       run: pytest --nbval arXiv.1909.05167/ --sanitize-with nbval_sanitize_file
+      run: pytest --nbval tabular_surrogate_builder/ --sanitize-with nbval_sanitize_file
