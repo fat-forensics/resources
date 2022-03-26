@@ -12,13 +12,13 @@ The list of resources is enclosed below.
 
 ## FAT Forensics: A Python Toolbox for Algorithmic Fairness, Accountability and Transparency ##
 
-See the [`arXiv.1909.05167`](./arXiv.1909.05167/) directory for more details.
+See the [`fat_forensics_overview`](./fat_forensics_overview/) directory for more details.
 
 * The manuscripts is available on [arXiv][arXiv:1909.05167].
 * Relevant Jupyter Notebooks are published in the [arXiv:1909.05167 directory][directory:1909.05167].
 
 [arXiv:1909.05167]: https://arxiv.org/abs/1909.05167
-[directory:1909.05167]: https://github.com/fat-forensics/resources/tree/master/arXiv.1909.05167
+[directory:1909.05167]: https://github.com/fat-forensics/resources/tree/master/fat_forensics_overview
 
 ## Building Tabular Surrogates With an Interactive Widget ##
 

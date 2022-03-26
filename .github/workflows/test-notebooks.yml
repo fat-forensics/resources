@@ -20,7 +20,7 @@ jobs:
       run: |
         pip install -r requirements-ci.txt
         pip install -r .binder/requirements.txt
-    - name: Test arXiv.1909.05167
-      run: pytest --nbval arXiv.1909.05167/ --sanitize-with nbval_sanitize_file
+    - name: Test fat_forensics_overview
+      run: pytest --nbval fat_forensics_overview/ --sanitize-with nbval_sanitize_file
     - name: Test tabular_surrogate_builder
       run: pytest --nbval tabular_surrogate_builder/ --sanitize-with nbval_sanitize_file
