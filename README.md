@@ -28,5 +28,13 @@ The Jupyter Notebook was used for:
 * [2021 BIAS Summer School][2021_bias-summer-school]; and
 * [2021 TAILOR Summer School][2021_tailor-summer-school].
 
+## Interactive Overview of Tabular and Image Surrogates ##
+
+See the [`surrogates_overview`](./surrogates_overview/) directory for more details.
+The Jupyter Notebook and Python scripts were used for:
+
+* [2021 BIAS Summer School][2021_bias-summer-school]; and
+* [2021 TAILOR Summer School][2021_tailor-summer-school].
+
 [2021_tailor-summer-school]: https://events.fat-forensics.org/2021_tailor-summer-school/
 [2021_bias-summer-school]: https://events.fat-forensics.org/2021_bias/

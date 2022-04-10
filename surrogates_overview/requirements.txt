@@ -1,8 +1,12 @@
 fat-forensics[all]==0.1.1
+ipywidgets==7.7.0
 matplotlib==3.1.0
 numpy==1.16.4
-pandas==0.25.0
-seaborn==0.9.0
+Pillow==8.1.2
+rise==5.7.1
+scikit-image==0.18.1
 scikit-learn==0.21.1
 scipy==1.3.0
+torch==1.8.0
+torchvision==0.9.0
 watermark==1.8.2
