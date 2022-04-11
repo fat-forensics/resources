@@ -20,10 +20,17 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.7
+        cache: 'pip'
     - name: Install dependencies 💾
       run: |
         pip install -r requirements-ci.txt
         pip install -r .binder/requirements.txt
+    - name: Get PyTorch model
+      run: >
+        python -c
+        'import torchvision.models as models;
+         models.inception_v3(pretrained=True);
+         models.alexnet(pretrained=True)'
     - name: Test fat_forensics_overview
       run: pytest --nbval fat_forensics_overview/ --sanitize-with nbval_sanitize_file
     - name: Test tabular_surrogate_builder
