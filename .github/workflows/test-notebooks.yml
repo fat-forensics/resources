@@ -13,7 +13,7 @@ jobs:
       uses: actions/cache@v3
       with:
         path: |
-          ../.cache/torch
+          /home/runner/.cache/torch
           fat_forensics_overview/adult.data
         key: ${{ runner.os }}-data_models
     - name: Set up Python 3.7 🐍
