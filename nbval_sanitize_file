@@ -17,3 +17,11 @@ replace: PYTHON-3.7.X
 [regex5]
 regex: ^(/[^/]+)+/python3.7
 replace: PYTHON-PATH
+
+[regex6]
+regex: ^<matplotlib[^\n]+>$
+replace: MATPLOTLIB
+
+[regex7]
+regex: (?P<stem>\d+\.\d{3})\d*
+replace: \g<stem>NUMERICAL-PRECISION
