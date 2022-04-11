@@ -23,5 +23,9 @@ regex: ^<matplotlib[^\n]+>$
 replace: MATPLOTLIB
 
 [regex7]
-regex: (?P<stem>\d+\.\d{3})\d*
+regex: (?P<stem>\d+\.\d{3})\d*\s*
 replace: \g<stem>NUMERICAL-PRECISION
+
+[regex8]
+regex: (?P<stem>\d+\.)\s*
+replace: \g<stem>
