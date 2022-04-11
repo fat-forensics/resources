@@ -141,7 +141,7 @@ def plot_image_explanation(blimey, explained_class, show_random=False):
     plt.suptitle(title, fontsize=18)
 
     # Show bar-plot explanation
-    x = ['#' + str(i[0]) for i in explanation[::-1]]
+    x = ['#' + str(i[0] + 1) for i in explanation[::-1]]
     y = [abs(i[1]) for i in explanation[::-1]]
     c = ['green' if i[1] >= 0 else 'red' for i in explanation[::-1]]
 
