@@ -1,2 +1,3 @@
 -r ../fat_forensics_overview/requirements.txt
 -r ../tabular_surrogate_builder/requirements.txt
+-r ../surrogates_overview/requirements.txt

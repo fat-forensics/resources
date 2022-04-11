@@ -1,8 +1,5 @@
 name: Test Jupyter Notebook 📓
-on:
-  push:
-    branches:
-      - master
+on: push
 jobs:
   build-n-deploy:
     name: Test 🔧
@@ -12,15 +9,29 @@ jobs:
       uses: actions/checkout@v2.3.1
       with:
         persist-credentials: false
+    - name: Cache models and data
+      uses: actions/cache@v3
+      with:
+        path: |
+          /home/runner/.cache/torch
+          fat_forensics_overview/adult.data
+        key: ${{ runner.os }}-data_models
     - name: Set up Python 3.7 🐍
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v3
       with:
         python-version: 3.7
+        cache: 'pip'
     - name: Install dependencies 💾
       run: |
         pip install -r requirements-ci.txt
         pip install -r .binder/requirements.txt
+    - name: Get PyTorch model
+      run: |
+        python -c 'import torchvision.models as models; models.inception_v3(pretrained=True);'
+        python -c 'import torchvision.models as models; models.alexnet(pretrained=True);'
     - name: Test fat_forensics_overview
       run: pytest --nbval fat_forensics_overview/ --sanitize-with nbval_sanitize_file
     - name: Test tabular_surrogate_builder
       run: pytest --nbval tabular_surrogate_builder/ --sanitize-with nbval_sanitize_file
+    - name: Test surrogates_overview
+      run: pytest --nbval surrogates_overview/ --sanitize-with nbval_sanitize_file
