@@ -24,6 +24,8 @@ import ipywidgets as widgets
 import fatf
 import sklearn.linear_model
 
+plt.style.use('seaborn')
+
 
 def plot_prediction(tuple_list, ax=None):
     """Plots a predictions."""
@@ -496,7 +498,7 @@ def generate_tabular_widget(
         min=min(x_range),
         max=max(x_range),
         step=x_step,
-        description='X - {}:'.format(x_name),
+        description='[X] {}:'.format(x_name),
         disabled=False,
         continuous_update=False,
         orientation='horizontal',
@@ -508,7 +510,7 @@ def generate_tabular_widget(
         min=min(y_range),
         max=max(y_range),
         step=y_step,
-        description='Y - {}:'.format(y_name),
+        description='[Y] {}:'.format(y_name),
         disabled=False,
         continuous_update=False,
         orientation='horizontal',
