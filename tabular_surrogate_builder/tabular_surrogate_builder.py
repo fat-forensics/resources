@@ -152,13 +152,15 @@ def _generate_data(data_samples_no, x_range, y_range, random_seed):
     """
     x_range_n, y_range_n = len(x_range), len(y_range)
     assert x_range_n > 2 and y_range_n > 2
+
+    y_range_ = y_range[::-1]
     data_, i = [], 0
     for y_ in range(y_range_n - 1):
         for x_ in range(x_range_n - 1):
             np.random.seed(random_seed)
             d_ = np.random.uniform(
-                low=(x_range[x_] + 0.1, y_range[y_] - 0.1),
-                high=(x_range[x_ + 1] - 0.1, y_range[y_ + 1] + 0.1),
+                low=(x_range[x_] + 0.1, y_range_[y_ + 1] + 0.1),
+                high=(x_range[x_ + 1] - 0.1, y_range_[y_] - 0.1),
                 size=(data_samples_no[i], 2)
             )
             data_.append(d_)
@@ -208,8 +210,8 @@ def generate_tabular_widget(
                     x_axis_range_[1],
                     feature_specification[0]['range'][1]]
         y_range_ = [feature_specification[1]['range'][0],
-                    y_axis_range_[1],
                     y_axis_range_[0],
+                    y_axis_range_[1],
                     feature_specification[1]['range'][1]]
         data_ = _generate_data(data_samples_no, x_range_, y_range_, random_seed)
 
