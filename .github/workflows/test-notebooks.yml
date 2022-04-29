@@ -31,7 +31,7 @@ jobs:
         python -c 'import torchvision.models as models; models.alexnet(pretrained=True);'
     - name: Test computation
       env:
-        PYTHONPATH: 'tabular_surrogate_builder:surrogates_overview'
+        PYTHONPATH: 'tabular_surrogate_builder:surrogates_overview:pi_ice_pd'
       run: pytest ./.tests
     - name: Test fat_forensics_overview
       run: pytest --nbval fat_forensics_overview/ --sanitize-with .nbval_sanitize_file.cfg
@@ -39,3 +39,5 @@ jobs:
       run: pytest --nbval tabular_surrogate_builder/ --sanitize-with .nbval_sanitize_file.cfg
     - name: Test surrogates_overview
       run: pytest --nbval surrogates_overview/ --sanitize-with .nbval_sanitize_file.cfg
+    - name: Test pi_ice_pd
+      run: pytest --nbval pi_ice_pd/ --sanitize-with .nbval_sanitize_file.cfg
