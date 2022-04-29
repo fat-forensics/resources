@@ -38,3 +38,7 @@ The Jupyter Notebook and Python scripts were used for:
 
 [2021_tailor-summer-school]: https://events.fat-forensics.org/2021_tailor-summer-school/
 [2021_bias-summer-school]: https://events.fat-forensics.org/2021_bias/
+
+## Permutation Importance, Individual Conditional Expectation and Partial Dependence ##
+
+See the [`pi_ice_pd`](./pi_ice_pd/) directory for more details.
