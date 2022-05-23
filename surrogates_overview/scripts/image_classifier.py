@@ -58,6 +58,8 @@ class ImageClassifier(object):
                 logger.warning('GPU was requested but it is not available. '
                                'Using CPU instead.')
                 predict_proba = self._predict_proba_cpu
+        else:
+            predict_proba = self._predict_proba_cpu
         self.predict_proba = predict_proba
 
         self.clf = clf
