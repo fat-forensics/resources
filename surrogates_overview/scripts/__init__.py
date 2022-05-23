@@ -13,3 +13,15 @@ for more details.
 """
 # Author: Kacper Sokol <k.sokol@bristol.ac.uk>
 # License: new BSD
+
+import logging
+
+# Set up logging; enable logging of level INFO and higher
+logger = logging.getLogger(__name__)
+_logger_handler = logging.StreamHandler()
+_logger_formatter = logging.Formatter(
+    '%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
+    datefmt='%y-%b-%d %H:%M:%S')
+_logger_handler.setFormatter(_logger_formatter)
+logger.addHandler(_logger_handler)
+logger.setLevel(logging.INFO)

@@ -14,10 +14,15 @@ from scripts.imagenet_label_map import IMAGENET_LABEL_MAP
 
 import numpy as np
 
+import logging
 import torch
 import torch.nn.functional as F
 import torchvision.models as models
 import torchvision.transforms as transforms
+
+logger = logging.getLogger(__name__)
+CUDA_AVAILABLE = torch.cuda.is_available()
+DEVICE = torch.device('cuda:0' if CUDA_AVAILABLE else 'cpu')
 
 
 def _get_preprocess_transform():
@@ -31,7 +36,7 @@ def _get_preprocess_transform():
 class ImageClassifier(object):
     """Image classifier based on PyTorch."""
 
-    def __init__(self, model='inception_v3'):
+    def __init__(self, model='inception_v3', use_gpu=False):
         """Initialises the image classifier."""
         assert model in ('inception_v3', 'alexnet')
 
@@ -43,6 +48,18 @@ class ImageClassifier(object):
             clf = models.inception_v3(pretrained=True, transform_input=False)
         else:
             clf = models.alexnet(pretrained=True)
+
+        if use_gpu:
+            if CUDA_AVAILABLE:
+                clf = clf.to(DEVICE)
+                # clf.cuda()
+                predict_proba = self._predict_proba_gpu
+            else:
+                logger.warning('GPU was requested but it is not available. '
+                               'Using CPU instead.')
+                predict_proba = self._predict_proba_cpu
+        self.predict_proba = predict_proba
+
         self.clf = clf
         self.clf.eval()
 
@@ -53,10 +70,18 @@ class ImageClassifier(object):
         """Fits the image classifier -- a dummy method."""
         return
 
-    def predict_proba(self, X):
-        """Predicts probabilities of the collection of images."""
+    def _predict_proba_cpu(self, X):
+        """[CPU] Predicts probabilities of the collection of images."""
         X_ = [self.preprocess_transform(x) for x in X]
         tensor = torch.stack(X_, dim=0)
+        prediction = F.softmax(self.clf(tensor), dim=1)
+        return prediction.detach().cpu().numpy()
+
+    def _predict_proba_gpu(self, X):
+        """[GPU] Predicts probabilities of the collection of images."""
+        X_ = [self.preprocess_transform(x) for x in X]
+        tensor = torch.stack(X_, dim=0)
+        tensor = tensor.to(DEVICE)
         prediction = F.softmax(self.clf(tensor), dim=1)
         return prediction.detach().cpu().numpy()
 
