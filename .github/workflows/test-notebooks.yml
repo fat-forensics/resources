@@ -16,10 +16,10 @@ jobs:
           /home/runner/.cache/torch
           fat_forensics_overview/adult.data
         key: ${{ runner.os }}-data_models
-    - name: Set up Python 3.7 🐍
+    - name: Set up Python 3.8 🐍
       uses: actions/setup-python@v3
       with:
-        python-version: 3.7
+        python-version: 3.8
         cache: 'pip'
     - name: Install dependencies 💾
       run: |
