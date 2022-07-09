@@ -1,5 +1,5 @@
 [![Build Status](https://github.com/fat-forensics/resources/actions/workflows/test-notebooks.yml/badge.svg)](https://github.com/fat-forensics/resources/actions/workflows/test-notebooks.yml)
-[![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://github.com/fat-forensics/resources)
+[![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://github.com/fat-forensics/resources)
 [![new BSD](https://img.shields.io/github/license/fat-forensics/resources.svg)](https://github.com/fat-forensics/resources/blob/master/LICENCE)  
 [![Open in Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fat-forensics/resources/master)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fat-forensics/resources/blob/master/)
