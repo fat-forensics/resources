@@ -6,7 +6,7 @@ numpy==1.20.1
 Pillow==8.1.2
 rise==5.7.1
 scikit-image==0.18.1
-scikit-learn==0.24.1
+scikit-learn==1.1.0
 scipy==1.6.1
 torch==1.8.0
 torchvision==0.9.0
