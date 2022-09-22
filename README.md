@@ -12,13 +12,15 @@ The list of resources is enclosed below.
 
 ## FAT Forensics: A Python Toolbox for Algorithmic Fairness, Accountability and Transparency ##
 
+[![Software Impacts](https://img.shields.io/badge/Software%20Impacts-10.1016/j.simpa.2022.100406-orange.svg)][simpa]
+
 See the [`fat_forensics_overview`](./fat_forensics_overview/) directory for more details.
 
-* The manuscripts is available on [arXiv][arXiv:1909.05167].
-* Relevant Jupyter Notebooks are published in the [arXiv:1909.05167 directory][directory:1909.05167].
+* The manuscripts is published with [*Software Impacts*][simpa].
+* Relevant Jupyter Notebooks are available in the [`fat_forensics_overview` directory][directory:simpa].
 
-[arXiv:1909.05167]: https://arxiv.org/abs/1909.05167
-[directory:1909.05167]: https://github.com/fat-forensics/resources/tree/master/fat_forensics_overview
+[simpa]: https://doi.org/10.1016/j.simpa.2022.100406
+[directory:simpa]: https://github.com/fat-forensics/resources/tree/master/fat_forensics_overview
 
 ## Building Tabular Surrogates With an Interactive Widget ##
 
